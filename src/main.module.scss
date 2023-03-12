@@ -1,0 +1,14 @@
+.main {
+    max-width: 100vw;
+    min-height: 100vh;
+    // background: radial-gradient( black, #1a1a4b, gray);
+    background: radial-gradient(40% 50%, #030e52, #05172b);
+    // background: linear-gradient(to right, #333333, #1a1a1a, #0d0d66);
+
+}
+
+.markup {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem
+}
