@@ -1,4 +1,5 @@
 import styles from "../header/header.module.scss";
+import { Link } from "react-router-dom";
 import AppContext from "../../context/AppContext";
 import { useContext } from "react";
 
@@ -8,9 +9,12 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div onClick={topFilms} className={styles.logot}>
-        B
-      </div>
+      <Link to="/">
+        <div onClick={topFilms} className={styles.logot}>
+          B
+        </div>
+      </Link>
+
       <div>
         <img
           className={styles.search}
@@ -30,7 +34,9 @@ const Header = () => {
           onChange={handleInput}
         />
       </div>
-      <img className={styles.img} width={55} src="img/asap.jpeg" alt="logo" />
+      <Link to="/film">
+        <img className={styles.img} width={55} src="img/asap.jpeg" alt="logo" />
+      </Link>
     </header>
   );
 };

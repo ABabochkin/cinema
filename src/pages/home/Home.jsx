@@ -1,21 +1,21 @@
 import React from "react";
-import Movie from "../movie/Movie";
-import styles from "../movies/movies.module.scss";
+import Movie from "../../components/movie/Movie";
+import styles from "../home/home.module.scss";
 
 import AppContext from "../../context/AppContext";
 import { useContext } from "react";
 
-const Movies = (props) => {
+const Home = (props) => {
   const { movies = [] } = useContext(AppContext);
-  const { openModal } = props;
+  const { fetchMovie } = props;
 
   return (
     <div className={styles.markup}>
       {movies.map((movie) => (
-        <Movie key={movie.filmId} movie={movie} openModal={openModal} />
+        <Movie key={movie.filmId} movie={movie} fetchMovie={fetchMovie} />
       ))}
     </div>
   );
 };
 
-export default Movies;
+export default Home;

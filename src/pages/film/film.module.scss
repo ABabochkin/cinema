@@ -1,0 +1,23 @@
+.main {
+    padding: 20px 20px;
+    color: white;
+}
+
+.mainDescription {
+    display: flex;
+}
+
+.name{
+    font-size: 25px;
+    h1 {
+        margin: 0;
+    }
+}
+
+.rightInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
