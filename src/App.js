@@ -19,12 +19,18 @@ const App = () => {
     setUserInput(e.target.value);
   };
 
+  function handleKeyDown(e) {
+    if (e.keyCode === 13) {
+      searchMovie(userInput);
+    }
+  }
+
   const topFilms = () => {
     fetch(
       "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1",
       {
         headers: {
-          "X-API-KEY": "5dcce76a-b7c6-4b1e-b94b-7f04d055b7e4",
+          "X-API-KEY": process.env.REACT_APP_API_KEY,
           "Content-Type": "application/json",
         },
       }
@@ -43,7 +49,7 @@ const App = () => {
         `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${userInput}&page=1`,
         {
           headers: {
-            "X-API-KEY": "5dcce76a-b7c6-4b1e-b94b-7f04d055b7e4",
+            "X-API-KEY": process.env.REACT_APP_API_KEY,
             "Content-Type": "application/json",
           },
         }
@@ -60,7 +66,7 @@ const App = () => {
         ` https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}`,
         {
           headers: {
-            "X-API-KEY": "5dcce76a-b7c6-4b1e-b94b-7f04d055b7e4",
+            "X-API-KEY": process.env.REACT_APP_API_KEY,
             "Content-Type": "application/json",
           },
         }
@@ -81,6 +87,7 @@ const App = () => {
           searchMovie,
           movies,
           idMovie,
+          handleKeyDown,
         }}
       >
         <div className={styles.main}>

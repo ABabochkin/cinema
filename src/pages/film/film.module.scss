@@ -21,3 +21,43 @@
     margin-left: 20px;
 }
 
+@media (max-width: 767px) {
+    .main {
+      padding: 10px;
+    }
+    .mainDescription {
+      flex-direction: column;
+    }
+    .image {
+      margin-right: 0;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .rightInfo {
+      margin-left: 0;
+    }
+    .name {
+      font-size: 20px;
+    }
+    .shortDiscription {
+      margin-top: 10px;
+      ul {
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 10px;
+      button {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+    .description {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+  }
+

@@ -4,7 +4,7 @@ import AppContext from "../../context/AppContext";
 import { useContext } from "react";
 
 const Header = () => {
-  const { userInput, topFilms, handleInput, searchMovie } =
+  const { userInput, topFilms, handleInput, searchMovie, handleKeyDown } =
     useContext(AppContext);
 
   return (
@@ -32,6 +32,7 @@ const Header = () => {
           placeholder="Введите название фильма"
           value={userInput}
           onChange={handleInput}
+          onKeyDown={handleKeyDown}
         />
       </div>
       <Link to="/film">
