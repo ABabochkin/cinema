@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import AppContext from "../../context/AppContext";
 import { useContext } from "react";
 
+// Для теста
+
 const Header = () => {
   const { userInput, topFilms, handleInput, searchMovie, handleKeyDown } =
     useContext(AppContext);
