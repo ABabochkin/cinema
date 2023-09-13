@@ -24,7 +24,6 @@ const App = () => {
       searchMovie(userInput);
     }
   }
-  //Привет это тестовый коммит!!!!
 
   const topFilms = () => {
     fetch(
